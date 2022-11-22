@@ -1,7 +1,7 @@
 version: 2.1
 
 description: >
-  Sample orb description
+  Sample orb containing one task to complete and ftp deploy
 # What will your orb allow users to accomplish?
 # Descriptions should be short, simple, and informative.
 
