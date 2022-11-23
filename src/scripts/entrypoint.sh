@@ -1,3 +1,4 @@
 #!/bin/bash
-sh lftp_install.sh
-sh lftp_run.sh
+ls -a
+sh ./lftp_install.sh
+sh ./lftp_run.sh
