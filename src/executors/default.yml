@@ -3,4 +3,3 @@ description: >
   If you do not require an executor, you can simply delete this directory.
 docker:
   - image: 'alpine:3.11'
-  
