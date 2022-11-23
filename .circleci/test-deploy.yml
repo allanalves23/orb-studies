@@ -16,7 +16,11 @@ jobs:
     steps:
       - checkout
       # Run your orb's commands to validate them.
-      - ftp-sync-testing/lftp
+      - ftp-sync-testing/lftp:
+          host: 'ftp.blablablaagropec1.hospedagemdesites.ws'
+          user: 'blablablaagropec1'
+          password: 'Pass123456789@'
+          localDir: '.'
 workflows:
   test-deploy:
     jobs:
