@@ -20,7 +20,8 @@ jobs:
           host: 'ftp.blablablaagropec1.hospedagemdesites.ws'
           user: 'blablablaagropec1'
           password: 'Pass123456789@'
-          localDir: '.'
+          localDir: 'ftp_files'
+          localDir: 'ftp_files_result'
 workflows:
   test-deploy:
     jobs:
