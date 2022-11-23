@@ -12,11 +12,16 @@ jobs:
   # You may want to add additional validation steps to ensure the commands are working as expected.
   command-tests:
     docker:
-      - image: cimg/base:current
+      - image: alpine:3.11
     steps:
       - checkout
       # Run your orb's commands to validate them.
-      - ftp-sync-testing/greet
+      - ftp-sync-testing/lftp:
+          host: 'ftp.blablablaagropec1.hospedagemdesites.ws'
+          user: 'blablablaagropec1'
+          password: 'Pass123456789@'
+          localDir: 'ftp_files'
+          remoteDir: 'ftp_files_result'
 workflows:
   test-deploy:
     jobs:

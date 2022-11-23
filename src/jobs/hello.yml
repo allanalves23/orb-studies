@@ -1,14 +1,40 @@
 description: >
-  Sample description
+  Publish FTP Files
 # What will this job do?
 
 executor: default
 
 parameters:
-  to:
+  host:
     type: string
-    default: "World"
-    description: "Hello to whom?"
+    description: "Host FTP"
+  user:
+    type: string
+    description: "Usuário FTP"
+  password:
+    type: string
+    description: "Senha FTP"
+  localDir:
+    type: string
+    default: "."
+    description: "Diretório Local"
+  remoteDir:
+    type: string
+    default: "public_html"
+    description: "Diretório Remoto"
+  forcessl:
+    type: boolean
+    default: false
+    description: "Forçar SSL?"
+  options:
+    type: string
+    default: ""
+    description: "Opções adicionais"
 steps:
-  - greet:
-      to: << parameters.to >>
+  - lftp:
+      host: << parameters.host >>
+      user: << parameters.user >>
+      password: << parameters.password >>
+      localDir: << parameters.localDir >>
+      remoteDir: << parameters.remoteDir >>
+
