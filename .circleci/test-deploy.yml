@@ -16,7 +16,7 @@ jobs:
     steps:
       - checkout
       # Run your orb's commands to validate them.
-      - ftp-sync-testing/greet
+      - ftp-sync-testing/lftp
 workflows:
   test-deploy:
     jobs:
