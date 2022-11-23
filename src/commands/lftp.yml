@@ -1,0 +1,42 @@
+description: >
+  This command echos "Hello World" using file inclusion.
+# What will this command do?
+# Descriptions should be short, simple, and clear.
+parameters:
+  host:
+    type: string
+    description: "Host FTP"
+  user:
+    type: string
+    description: "Usuário FTP"
+  password:
+    type: string
+    description: "Senha FTP"
+  localDir:
+    type: string
+    default: "."
+    description: "Diretório Local"
+  remoteDir:
+    type: string
+    default: "public_html"
+    description: "Diretório Remoto"
+  forcessl:
+    type: boolean
+    default: false
+    description: "Forçar SSL?"
+  options:
+    type: string
+    default: ""
+    description: "Opções adicionais"
+steps:
+  - run:
+      environment:
+        PARAM_HOST: <<parameters.host>>
+        PARAM_USER: <<parameters.user>>
+        PARAM_PASSWORD: <<parameters.password>>
+        PARAM_LOCALDIR: <<parameters.localDir>>
+        PARAM_REMOTEDIR: <<parameters.remoteDir>>
+        PARAM_FORCESSL: <<parameters.forcessl>>
+        PARAM_OPTIONS: <<parameters.options>>
+      name: Publish via LFTP
+      command: <<include(scripts/entrypoint.sh)>>
