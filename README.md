@@ -36,4 +36,4 @@ We welcome [issues](https://github.com/allanalves23/orb-studies/issues) to and [
     - If you have used _[Conventional Commit Messages](https://conventionalcommits.org/)_ it will be easy to determine what types of changes were made, allowing you to ensure the correct version tag is being published.
 5. Now ensure the version tag selected is semantically accurate based on the changes included.
 6. Click _"Publish Release"_.
-    - This will push a new tag and trigger your publishing pipeline on CircleCI.
+    - This will push a new tag and trigger your publishing pipeline on CircleCI. 
