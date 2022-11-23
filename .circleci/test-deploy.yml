@@ -21,7 +21,7 @@ jobs:
           user: 'blablablaagropec1'
           password: 'Pass123456789@'
           localDir: 'ftp_files'
-          localDir: 'ftp_files_result'
+          remoteDir: 'ftp_files_result'
 workflows:
   test-deploy:
     jobs:
