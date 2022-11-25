@@ -28,11 +28,11 @@ parameters:
 steps:
   - run:
       environment:
-        PARAM_HOST: <<parameters.host>>
-        PARAM_USER: <<parameters.user>>
-        PARAM_LOCALDIR: <<parameters.localDir>>
-        PARAM_REMOTEDIR: <<parameters.remoteDir>>
-        PARAM_FORCESSL: <<parameters.forcessl>>
-        PARAM_OPTIONS: <<parameters.options>>
+        FTP_HOST: <<parameters.host>>
+        FTP_USER: <<parameters.user>>
+        FTP_LOCALDIR: <<parameters.localDir>>
+        FTP_REMOTEDIR: <<parameters.remoteDir>>
+        FTP_FORCESSL: <<parameters.forcessl>>
+        FTP_OPTIONS: <<parameters.options>>
       name: Publish via LFTP
       command: <<include(scripts/entrypoint.sh)>>
