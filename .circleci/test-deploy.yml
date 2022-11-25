@@ -19,7 +19,6 @@ jobs:
       - ftp-sync-testing/lftp:
           host: 'ftp.blablablaagropec1.hospedagemdesites.ws'
           user: 'blablablaagropec1'
-          password: 'Pass123456789@'
           localDir: 'ftp_files'
           remoteDir: 'ftp_files_result'
 workflows:
