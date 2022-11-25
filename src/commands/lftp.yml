@@ -1,5 +1,5 @@
 description: >
-  This command echos "Hello World" using file inclusion.
+  This command upload specific folder to ftp host destination
 # What will this command do?
 # Descriptions should be short, simple, and clear.
 parameters:
@@ -9,9 +9,6 @@ parameters:
   user:
     type: string
     description: "Usuário FTP"
-  password:
-    type: string
-    description: "Senha FTP"
   localDir:
     type: string
     default: "."
@@ -33,7 +30,6 @@ steps:
       environment:
         PARAM_HOST: <<parameters.host>>
         PARAM_USER: <<parameters.user>>
-        PARAM_PASSWORD: <<parameters.password>>
         PARAM_LOCALDIR: <<parameters.localDir>>
         PARAM_REMOTEDIR: <<parameters.remoteDir>>
         PARAM_FORCESSL: <<parameters.forcessl>>
